@@ -1,0 +1,36 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function location_time_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.location_time':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t("To get time of the location set in the back-end.") . '</p>';
+      $output .= '<h3>' . t('Configuration Steps:') . '</h3>';
+      $output .= '<ol>
+            <li>Install & enable "Location & Time" module</li>
+            <li>Go to the "Admin Configuration" page eg- Admin Menu >> Configuration >> Content Authoring >> Location & Time</li>
+            <li>Set the needed values there.</li>
+            <li>Click on the save configuration button.</li>
+        </ol>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function location_time_theme($existing, $theme, $type, $path) {
+  return array(
+    'location_time' => array(
+      'variables' => array(
+        'data' => [],
+      )
+    )
+  );
+}
