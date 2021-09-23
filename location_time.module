@@ -10,13 +10,14 @@ function location_time_help($route_name, RouteMatchInterface $route_match) {
     case 'help.page.location_time':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t("To get time of the location set in the back-end.") . '</p>';
+      $output .= '<p>' . t('Show the current date & time as per the location/timezone.') . '</p>';
       $output .= '<h3>' . t('Configuration Steps:') . '</h3>';
       $output .= '<ol>
-            <li>Install & enable "Location & Time" module</li>
-            <li>Go to the "Admin Configuration" page eg- Admin Menu >> Configuration >> Content Authoring >> Location & Time</li>
-            <li>Set the needed values there.</li>
+            <li>Install & enable "Location & Time" module.</li>
+            <li>Go to the "Admin Configuration" page and then visit Configuration >> Content Authoring >> Location & Time.</li>
+            <li>Set the needed values in form there.</li>
             <li>Click on the save configuration button.</li>
+            <li>Finally, go to the "Block Layout" and enable the relevant block "Location &amp; Time".</li>
         </ol>';
       return $output;
   }
