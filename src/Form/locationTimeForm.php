@@ -111,6 +111,4 @@
         ->set('timezone', $timezone)
         ->save();
     }
-
   }
-?>
