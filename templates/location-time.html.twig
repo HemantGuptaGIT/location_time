@@ -1,8 +1,4 @@
-{% if data.country %}
 <div id="wrapper">
   <p>Location:<br />{{ data.country }}/{{ data.city }}</p>
   <p>Date & Time:<br />{{ data.date_formatted }}</p>
 </div>
-{% else %}
-  <p>{{ 'To see this, please go to the "Admin Configuration" page eg- Admin Menu >> Configuration >> Content Authoring >> Location & Time and set the needed values.'|t }}</p>
-{% endif %}

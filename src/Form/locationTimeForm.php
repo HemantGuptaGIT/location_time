@@ -75,19 +75,19 @@
         '#type' => 'textfield',
         '#title' => $this->t('Country'),
         '#required' => TRUE,
-        '#default_value' => $config->get('country'),
+        '#default_value' => $config->get('country') ?: $this->t('India'),
       ];
       $form['city'] = [
         '#type' => 'textfield',
         '#title' => $this->t('City'),
         '#required' => TRUE,
-        '#default_value' => $config->get('city'),
+        '#default_value' => $config->get('city') ?: $this->t('New Delhi'),
       ];
       $form['timezone'] = array (
         '#type' => 'select',
         '#title' => $this->t('Timezone'),
         '#options' => $timezone,
-        '#default_value' => $config->get('timezone'),
+        '#default_value' => $config->get('timezone') ?: $this->t('Asia/Kolkata'),
         '#required' => TRUE,
       );
 
