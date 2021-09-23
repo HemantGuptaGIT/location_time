@@ -102,5 +102,12 @@
       
       return $data;
     }
+
+    /**
+     * @return int
+     */
+    public function getCacheMaxAge() {
+      return 0;
+    }
     
   }

@@ -35,3 +35,12 @@ function location_time_theme($existing, $theme, $type, $path) {
     )
   );
 }
+
+/**
+ * Implements hook_preprocess_block()
+ */
+function location_time_preprocess_block(&$vars) {
+  if($vars['derivative_plugin_id'] == 'location_time') {
+    $vars['#cache']['max-age'] = 0;
+  }
+}
